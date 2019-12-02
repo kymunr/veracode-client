@@ -92,7 +92,7 @@ class VeracodeClient {
       gzip: true, // Veracode recommends to use GZIP whenever possible
     });
 
-    const jsResponse = convert.xml2js(xmlResponse, { compact: true });
+    const jsResponse = convert.xml2js(xmlResponse, { compact: false });
 
     if (jsResponse.error) {
       throw new Error(jsResponse.error._text);
